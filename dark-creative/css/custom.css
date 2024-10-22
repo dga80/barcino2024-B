@@ -1,0 +1,25 @@
+.btn-custom-outline {
+        border: 2px solid white;
+        background-color: transparent;
+        color: white;
+    }
+.btn-custom-outline:hover {
+        background-color: white;
+        color: black;
+    }
+    
+.products-heading{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.invisible-space {
+    height: 30px;
+    width: auto;
+    background-color: transparent;
+}
+.fake-a {
+    color: #77143c;
+}

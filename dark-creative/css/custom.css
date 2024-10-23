@@ -23,3 +23,10 @@
 .fake-a {
     color: #77143c;
 }
+.cbp-caption-zoom .cbp-caption-activeWrap {
+    opacity: 0;
+    top: 0;
+    background-color: #ad935b;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+}

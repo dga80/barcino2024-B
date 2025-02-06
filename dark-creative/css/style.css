@@ -895,9 +895,12 @@ figure.about-image {
     color: #fff;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2rem;
 }
+
 
 figure.about-image * {
     -webkit-box-sizing: border-box;

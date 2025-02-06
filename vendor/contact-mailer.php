@@ -14,7 +14,7 @@ if($_POST)
 
     $mail = new PHPMailer();
 
-    $your_email = "youremail@website.com";
+    $your_email = "contact@barcinomeats.co.uk";
 
 
     //check if its an ajax request, exit if not
@@ -40,7 +40,7 @@ if($_POST)
             die($output);
         }
         else {
-            $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
+            $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
     if(isset($_POST["firstName"]) && isset($_POST["lastName"])) {
@@ -50,7 +50,7 @@ if($_POST)
             die($output);
         }
         else {
-            $user_Name = filter_var($_POST["firstName"], FILTER_SANITIZE_STRING) . " " . filter_var($_POST["lastName"], FILTER_SANITIZE_STRING);
+            $user_Name = filter_var($_POST["firstName"], FILTER_SANITIZE_FULL_SPECIAL_CHARS) . " " . filter_var($_POST["lastName"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
     //education
@@ -61,7 +61,7 @@ if($_POST)
             die($output);
         }
         else {
-            $father_Name = filter_var($_POST["fatherName"], FILTER_SANITIZE_STRING);
+            $father_Name = filter_var($_POST["fatherName"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
     if(isset($_POST["quoteName"])) {
@@ -71,7 +71,7 @@ if($_POST)
             die($output);
         }
         else {
-            $quote_Name = filter_var($_POST["quoteName"], FILTER_SANITIZE_STRING);
+            $quote_Name = filter_var($_POST["quoteName"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
     if(isset($_POST["userAddress"])) {
@@ -81,7 +81,7 @@ if($_POST)
             die($output);
         }
         else {
-            $user_Address = filter_var($_POST["userAddress"], FILTER_SANITIZE_STRING);
+            $user_Address = filter_var($_POST["userAddress"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
     if(isset($_POST["course"])) {
@@ -91,7 +91,7 @@ if($_POST)
             die($output);
         }
         else {
-            $applied_Course = filter_var($_POST["course"], FILTER_SANITIZE_STRING);
+            $applied_Course = filter_var($_POST["course"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
 
@@ -239,7 +239,7 @@ if($_POST)
             die($output);
         }
         else {
-            $user_Message = filter_var($_POST["userMessage"], FILTER_SANITIZE_STRING);
+            $user_Message = filter_var($_POST["userMessage"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
     }
 
@@ -267,21 +267,31 @@ if($_POST)
         }
     }
 
-
-
-    //Server settings
-//    $mail->isSMTP();                                            // Send using SMTP
-//    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
-//    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-//    $mail->Username   = 'website@gmail.com';                     // SMTP username
-//    $mail->Password   = 'your password';                         // SMTP password
-//    $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-//    $mail->Port       = 587;                                    // TCP port to connect to
-
-    //Recipients
-    $mail->setFrom($user_Email,$user_Name);
-    $mail->addAddress($your_email, 'Theme Industry');     // Add a recipient
+    //Server settings Dani Test
+    $mail->isSMTP();
+    $mail->Host = "smtp.gmail.com";
+    $mail->SMTPAuth = true;
+    $mail->Username = $your_email; 
+    $mail->Password = "gkpmxuwjuhnwoxwe"; // contraseña google password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Cifrado TLS
+    $mail->Port = 587; // Puerto TLS
+    
+    $mail->setFrom($your_email, "Dani Test"); // Emisor
+    $mail->addAddress($your_email); // Receptor (yo mismo)
     $mail->addReplyTo($your_email, 'Information');
+
+    //Server settings Barcino Meats
+
+    // $mail->isSMTP();
+    // $mail->Host = "kingsfinecookedmeats-co-uk.outbound1.mailanyone.net";
+    // $mail->SMTPAuth = true;
+    // $mail->Username = $your_email; 
+    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+    // $mail->Port = 25;
+    
+    // $mail->setFrom($your_email, "Barcino Meats"); 
+    // $mail->addAddress($your_email);
+    // $mail->addReplyTo($your_email, 'Information');
 
 
     // Content

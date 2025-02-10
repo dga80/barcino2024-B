@@ -267,31 +267,18 @@ if($_POST)
         }
     }
 
-    //Server settings Dani Test
+    Server settings Barcino Meats
+
     $mail->isSMTP();
-    $mail->Host = "smtp.gmail.com";
+    $mail->Host = "kingsfinecookedmeats-co-uk.outbound1.mailanyone.net";
     $mail->SMTPAuth = true;
-    $mail->Username = $your_email; 
-    $mail->Password = "gkpmxuwjuhnwoxwe"; // contraseña google password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Cifrado TLS
-    $mail->Port = 587; // Puerto TLS
+    $mail->Username = $your_email; // line 17 $your_email = "contact@barcinomeats.co.uk";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+    $mail->Port = 25;
     
-    $mail->setFrom($your_email, "Dani Test"); // Emisor
-    $mail->addAddress($your_email); // Receptor (yo mismo)
+    $mail->setFrom($your_email, "Barcino Meats"); 
+    $mail->addAddress($your_email);
     $mail->addReplyTo($your_email, 'Information');
-
-    //Server settings Barcino Meats
-
-    // $mail->isSMTP();
-    // $mail->Host = "kingsfinecookedmeats-co-uk.outbound1.mailanyone.net";
-    // $mail->SMTPAuth = true;
-    // $mail->Username = $your_email; 
-    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-    // $mail->Port = 25;
-    
-    // $mail->setFrom($your_email, "Barcino Meats"); 
-    // $mail->addAddress($your_email);
-    // $mail->addReplyTo($your_email, 'Information');
 
 
     // Content

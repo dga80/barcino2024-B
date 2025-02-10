@@ -165,7 +165,6 @@ section{padding: 7.5rem 0;}
 .opacity-9{opacity: .9;}
 
 /* button */
-/* .btn {-webkit-appearance: initial; overflow: hidden;position: -webkit-sticky;position: sticky; z-index: 1; display:inline-block; font-size: 15px; border:2px solid transparent; letter-spacing: .5px; line-height: inherit; border-radius: 0; width: auto;font-family: 'Montserrat', sans-serif; font-weight: bold; -webkit-transition: all .5s ease;-o-transition: all .5s ease !important;transition: all .5s ease !important;} */
 
 /* Transparent button */
 .btn.btn-trans {background: transparent; border-color: #ffffff; color: #ffffff;}
@@ -789,36 +788,7 @@ header{
     font-family: 'Montserrat', sans-serif;;
 }
 
-/*.slider-area .btn.btn-expand {*/
-/*    padding: 10px 30px;*/
-/*    position: relative;*/
-/*    z-index: 1;*/
-/*    color: #ffffff;*/
-/*}*/
 
-/*.slider-area .btn.btn-expand span{*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 35%;*/
-/*    height:100%;*/
-/*    z-index:-1;*/
-/*    border-radius: 50px;*/
-/*    background: #cee002;*/
-/*    position:absolute;*/
-/*    transition-duration: .3s;*/
-/*    -webkit-transition-duration: .3s;*/
-/*    -moz-transition-duration: .3s;*/
-/*    -o-transition-duration: .3s;*/
-/*    -ms-transition-duration: .3s;*/
-/*}*/
-
-/*.slider-area .btn.btn-expand:hover {*/
-/*    color: #23262d;*/
-/*}*/
-
-/*.slider-area .btn.btn-expand:hover span  {*/
-/*    width:100%!important;*/
-/*}*/
 
 /* ===================================
     About Section
@@ -2190,162 +2160,7 @@ figure.about-image.hover .curl {
         height: auto;
     }
 }
-/* 
-@media screen and (max-width: 1199px) {
-    .team-sec h1, .team-sec .h1 {
-        font-size: 3.56rem;
-    }
-    .team-sec h2 {
-        font-size: 2.45rem;
-    }
-    .team-sec h3 {
-        font-size: 1.65rem;
-    }
-    .team-sec h4 {
-        font-size: 1.15rem;
-    }
-    .team-sec h5 {
-        font-size: 1rem;
-    }
-    .team-sec .team-classic-content {
-        padding: 59px 20px;
-    }
-} */
 
-/* @media screen and (max-width: 991px) and (min-width: 768px){
-    .heading-area .heading {
-        font-size: 36px;
-    }
-    .banner-icons{
-        display: none;
-    }
-    .logo-center{
-        position: relative;
-    }
-
-    .sidemenu_btn {
-        right: -15px;
-    }
-    .side-menu {
-        width: 60%;
-    }
-
-    .slider-area h4 {
-        font-size: 26px;
-    }
-
-    .about .about-img-small {
-        margin: 60px 0 0 0;
-    }
-    .about-boxes {
-        padding: 0;
-    }
-
-    .team-sec h1, .team-sec .h1 {
-        font-size: 2.95rem;
-    }
-    .team-sec h2 {
-        font-size: 2.3rem;
-    }
-    .team-sec h3 {
-        font-size: 1.4rem;
-    }
-    .team-sec h4 {
-        font-size: 1.125rem;
-    }
-
-    .counter-content span {
-        font-size: 14px;
-    }
-    .counter-content h3, .counter-content h3 span {
-        font-size: 24px;
-    }
-    .parallax-box h2 {
-        font-size: 26px;
-    }
-    .parallax-box h5 {
-        font-size: 14px;
-    }
-    .counter-content h3, .counter-content h3 span {
-        font-size: 22px;
-    }
-
-    .testimonial .h1, .testimonial h1 {font-size: 58px;}
-    .testimonial .h3, .testimonial h3 {font-size: 32px;}
-
-    .pricing .heading-area .heading {
-        font-size: 34px;
-    }
-    .pricing .heading-area .sub-heading {
-        font-size: 16px;
-    }
-    .pricing .padding-bottom {
-        padding-bottom: 5.5rem;
-    }
-    .pricing .price-margin {
-        margin: 50px 0;
-    }
-    .pricing .price-item {
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .blog {
-        text-align: center;
-    }
-    .blog h2 {
-        text-align: center;
-    }
-    .blog .blog-img {
-        width: 100%;
-        margin-top: 80px;
-    }
-    .blog .right-text {
-        justify-content: center;
-        text-align: center!important;
-    }
-
-    .standalone-detail {
-        padding-bottom: 70px;
-    }
-    .standalone-area .gradient-text1{
-        font-size: 30px;
-    }
-    .standalone-detail .heading{
-        font-size: 30px;
-    }
-    .standalone-area .sub-heading {
-        margin-top: 3rem;
-    }
-    .standalone-row .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .standalone-row:nth-child(2) .stand-img-des {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .standalone-row:nth-child(2){
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-    .para_text {
-        font-size: 18px;
-    }
-    .author-avatar {
-        float: none;
-        margin-bottom: 25px;
-        overflow: visible;
-    }
-    .agency-author {
-        padding: 30px;
-        text-align: left;
-    }
-    .author-content {
-        padding: 0;
-    }
-} */
 
 @media screen and (max-width: 991px) {
 
@@ -2560,48 +2375,3 @@ figure.about-image.hover .curl {
         font-size: 30px;
     }
 }
-
-/* @media screen and (max-width: 575px) {
-
-    body {
-        text-align: center;
-    }
-    .heading-area .heading {
-        font-size: 24px;
-    }
-    .side-nav .navbar-nav .nav-item {
-        margin: 4px 0;
-    }
-
-    .slider-area h4 {
-        font-size: 14px;
-    }
-    .slider-area h2 {
-        font-size: 36px;
-    }
-
-    .about .main-title h2 {
-        font-size: 24px;
-    }
-    .about-boxes {
-        padding: 0;
-    }
-
-    .team-sec .main-title h5 {
-        line-height: 1;
-        margin-bottom: 1rem;
-    }
-
-    .testimonial .h1, .testimonial h1 {
-        font-size: 30px;
-    }
-
-    .pricing .heading-area .heading {
-        font-size: 24px;
-    }
-
-    .blog h2 {
-        text-align: center;
-        font-size: 26px;
-    }
-} */

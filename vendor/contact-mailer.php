@@ -244,30 +244,30 @@ if($_POST)
     }
 
 
-    //additional php validation
+    
     if(isset($user_Name)) {
-        if (strlen($user_Name) < 3) // If length is less than 3 it will throw an HTTP error.
+        if (strlen($user_Name) < 3) 
         {
             $output = json_encode(array('type' => 'error', 'text' => 'Name is too short or empty!'));
             die($output);
         }
     }
     if(isset($_POST["userEmail"])) {
-        if (!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) //email validation
+        if (!filter_var($user_Email, FILTER_VALIDATE_EMAIL))
         {
             $output = json_encode(array('type' => 'error', 'text' => 'Please enter a valid email!'));
             die($output);
         }
     }
     if(isset($_POST["userMessage"])) {
-        if (strlen($user_Message) < 5) //check emtpy message
+        if (strlen($user_Message) < 5) 
         {
             $output = json_encode(array('type' => 'error', 'text' => 'Too short message! Please enter something.'));
             die($output);
         }
     }
 
-    Server settings Barcino Meats
+    //Server settings Barcino Meats
 
     $mail->isSMTP();
     $mail->Host = "kingsfinecookedmeats-co-uk.outbound1.mailanyone.net";
@@ -282,14 +282,13 @@ if($_POST)
 
 
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);                                  
     $mail->Subject = 'New Contact Inquiry from your Website';
     $mail->Body  = "<h4 style='text-align: center;padding: 25px 15px;background-color: #0c6c9e;color: #FFFFFF;font-size:16px;width:90%;border-radius: 10px;'>Hi There! You have a new inquiry from your website.</h4><br><br>";
 
     if(isset($_POST["userEmail"])) {
         $mail->Body .= "<strong>Email: </strong>" . $user_Email . "<br>";
     }
-    //education
     if(isset($_POST["fatherName"])) {
         $mail->Body .= "<strong>Father Name: </strong>" . $father_Name . "<br>";
     }
@@ -314,29 +313,25 @@ if($_POST)
     if(isset($_POST["quoteBudget"])) {
         $mail->Body .= "<strong>Budget: </strong>" . $budget . "<br>";
     }
-    //Directory listing
+  
     if(isset($_POST["propertyId"])) {
         $mail->Body .= "<strong>Property Id: </strong>" . $property_id . "<br>";
     }
     if(isset($_POST["propertyType"])) {
         $mail->Body .= "<strong>Property Type: </strong>" . $property_type . "<br>";
     }
-    // dental
     if(isset($_POST["service"])) {
         $mail->Body .= "<strong>Service Type: </strong>" . $service . "<br>";
     }
-    //Reservation , spa , medical template
     if(isset($_POST["reservationDate"])) {
         $mail->Body .= "<strong>Reservation Date: </strong>" . $res_date . "<br>";
     }
-    //spa
     if(isset($_POST["reserveTime"])) {
         $mail->Body .= "<strong>Reserved Time: </strong>" . $res_time . "<br>";
     }
     if(isset($_POST["totalPeople"])) {
         $mail->Body .= "<strong>Total People: </strong>" . $total_people . "<br>";
     }
-    //medical
     if(isset($_POST["userGender"])) {
         $mail->Body .= "<strong>Gender: </strong>" . $user_gender . "<br>";
     }

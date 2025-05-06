@@ -270,11 +270,10 @@ if($_POST)
     //Server settings Barcino Meats
 
     $mail->isSMTP();
-    $mail->Host = "kingsfinecookedmeats-co-uk.outbound1.mailanyone.net";
-    $mail->SMTPAuth = true;
-    $mail->Username = $your_email; // line 17 $your_email = "contact@barcinomeats.co.uk";
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+    $mail->Host = 'barcinomeats-co-uk.outbound1.mailanyone.net';
+    $mail->SMTPAuth = false;
     $mail->Port = 25;
+    $mail->SMTPSecure = false;
     
     $mail->setFrom($your_email, "Barcino Meats"); 
     $mail->addAddress($your_email);
